@@ -12,9 +12,6 @@ using namespace std;
 typedef vector<vector<int>> Matrix;
 typedef vector<int> Bytes;
 
-
-
-
 string bytes2str(Bytes key){
     stringstream key_ss;
 
@@ -328,46 +325,135 @@ namespace AES {
         return k_groups;
     }
 
-    Bytes decrypt_state(StateMatrix* s, vector<Matrix>* round_keys, int n){
-        n -= 1;
+    Bytes decrypt(Bytes key, Bytes val){
+        vector<Matrix> round_keys = expand_key(key);
+        StateMatrix state = StateMatrix(bytes2matrix(val));
+        
+        state.add_roundkey(round_keys[N_ROUNDS]);
 
-        s->inv_shift_rows();
-        s->inv_sub_bytes();
-        s->add_roundkey((*round_keys)[n]);
+        for (int round=(N_ROUNDS - 1); round >= 0; round -= 1) {
+            state.inv_shift_rows();
+            state.inv_sub_bytes();
+            state.add_roundkey(round_keys[round]);
+            
+            if (round > 0) {
+                state.inv_mix_columns();
+            }
+        }
 
-        if (n == 0) {
-            return matrix2bytes(s->matrix);
-        }
-        else {
-            s->inv_mix_columns();
-            return decrypt_state(s, round_keys, n);
-        }
+        return matrix2bytes(state.matrix);
     }
 
-    Bytes decrypt(Bytes key, Bytes ciphertext){
+    Bytes encrypt(Bytes key, Bytes val) {
         vector<Matrix> round_keys = expand_key(key);
-        StateMatrix* state = new StateMatrix(bytes2matrix(ciphertext));
-        
-        state->add_roundkey(round_keys[N_ROUNDS]);
-        return decrypt_state(state, &round_keys, N_ROUNDS);
+        StateMatrix state = StateMatrix(bytes2matrix(val));
+
+        state.add_roundkey(round_keys[0]);
+
+        for (int round = 1; round <= N_ROUNDS; ++round) {
+            state.sub_bytes();
+            state.shift_rows();
+
+            if (round < N_ROUNDS) {
+                state.mix_columns();
+            }
+            
+            state.add_roundkey(round_keys[round]);
+        }
+
+        return matrix2bytes(state.matrix);
     }
 }
 
-int main() {
-    //Bytes key = AES::generate_key();
+int main(int argc, char* argv[]) {
+    if (argc > 1) {
+        map<string, string> args;
+        bool encrypt = false;
+        bool decrypt = false;
+        bool hasKey = false;
+        bool is_plain_text = false;
+        bool out_readable = false;
 
-    /*
-    Bytes key{0xC3,0x2C,0x5C,0xA6,0xB5,0x80,0x5E,0x0C,0xDB,0x8D,0xA5,0x7A,0x2A,0xB6,0xFE,0x5C};
-    Bytes ciphertext{0xD1,0x4F,0x14,0x6A,0xA4,0x2B,0x4F,0xB6,0xA1,0xC4,0x08,0x42,0x29,0x8F,0x12,0xDD};
-    */
+        for (int i=0; i < argc; ++i) {
+            if (string(argv[i]) == "-e" || string(argv[i]) == "--encrypt") {
+                encrypt = true;
+                i += 1;
+                string val(argv[i]);
+                args.insert(make_pair("value", val));
+            }
+            else if (string(argv[i]) == "-d" || string(argv[i]) == "--decrypt") {
+                decrypt = true;
+                i += 1;
+                string val(argv[i]);
+                args.insert(make_pair("value", val));
+            }
+            else if (string(argv[i]) == "-k" || string(argv[i]) == "--key") {
+                hasKey = true;
+                i += 1;
+                string val(argv[i]);
+                args.insert(make_pair("key", val));
+            }
+            else if (string(argv[i]) == "-p" || string(argv[i]) == "--plainText") {
+                is_plain_text = true;
+            }
+            else if (string(argv[i]) == "-r" || string(argv[i]) == "--readable") {
+                out_readable = true;
+            }
+        }
 
-    Bytes key = hex2bytes("c32c5ca6b5805e0cdb8da57a2ab6fe5c");
-    Bytes ciphertext = hex2bytes("d14f146aa42b4fb6a1c40842298f12dd");
+        if (encrypt) {
+            if (!hasKey) {
+                args.insert(make_pair("key", bytes2hex(AES::generate_key())));
+            }
 
-    cout << bytes2str(AES::decrypt(key, ciphertext)) << endl;
-    cout << endl;
+            if (is_plain_text) {
+                args["value"] = bytes2hex(string2bytes(args["value"]));
+            }
 
-    cout << "key: " << bytes2hex(key) << endl;
+            Bytes key = hex2bytes(args["key"]);
+            Bytes value = hex2bytes(args["value"]);
 
+            cout << "\n ENCRYPTED\n---------------" << endl;
+            cout << bytes2hex(AES::encrypt(key, value)) << endl;
+            cout << endl;
+            cout << "KEY: " << args["key"] << endl;
+            cout << endl;
+        }
+        else if (decrypt) {
+            if (!hasKey) {
+                cout << endl;
+                cout << "No Key provided!" << endl;
+                cout << endl;
+            }
+            else {
+                if (is_plain_text) {
+                    args["value"] = bytes2hex(string2bytes(args["value"]));
+                }
+
+                Bytes key = hex2bytes(args["key"]);
+                Bytes value = hex2bytes(args["value"]);
+
+                cout << "\n DECRYPTED\n---------------" << endl;
+
+                if (out_readable) {
+                    cout << bytes2str(AES::decrypt(key, value)) << endl;
+                }
+                else {
+                    cout << bytes2hex(AES::decrypt(key, value)) << endl;
+                }
+                
+                cout << endl;
+                cout << "KEY: " << args["key"] << endl;
+                cout << endl;
+            }
+        }
+    }
+    else {
+        cout << endl;
+        cout << "No arguments submitted!" << endl;
+        cout << endl;
+    }
+    
     return 0;
+
 }
