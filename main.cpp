@@ -82,10 +82,4 @@ int main(int argc, char* argv[]) {
     }
 
     return 0;
-
-    /*
-    clear text: crypto{MYAES128}
-    key: c32c5ca6b5805e0cdb8da57a2ab6fe5c
-    ciphertext: d14f146aa42b4fb6a1c40842298f12dd
-    */
 }
