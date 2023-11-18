@@ -224,8 +224,6 @@ namespace AES {
                 this->matrix[1] = r1;
                 this->matrix[2] = r2;
                 this->matrix[3] = r3;
-
-
             }
 
             void mix_columns(){
