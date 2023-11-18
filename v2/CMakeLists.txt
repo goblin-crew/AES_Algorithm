@@ -3,6 +3,7 @@ project(AES128)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 set(LIB lib/aes128.lib.h
+        lib/aes128.lib.cpp
         lib/types/types.h
         lib/constants/constants.h
         lib/tools/converters.h
@@ -16,4 +17,4 @@ set(LIB lib/aes128.lib.h
 set(SOURCES main.cpp 
             ${LIB}        
     )
-add_executable(aes128 ${SOURCES})
+add_executable(aes128ecb ${SOURCES})

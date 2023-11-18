@@ -140,7 +140,6 @@ void StateMatrix::inv_mix_columns() {
 
 void StateMatrix::encrypt(MasterKey master_key) {
     Key key = Key(master_key);
-
     this->add_roundkey(key.round(0));
 
     for (int i = 1; i <= N_ROUNDS; ++i) 

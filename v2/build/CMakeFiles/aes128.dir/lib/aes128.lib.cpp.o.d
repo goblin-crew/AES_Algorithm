@@ -1,7 +1,6 @@
-CMakeFiles/aes128.dir/main.cpp.o: \
- /home/slowlorizz/.GIT/AES_Algorithm/v2/main.cpp \
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o: \
+ /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes128.lib.cpp \
  /usr/include/stdc-predef.h \
- /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes128.lib.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
  /usr/include/c++/11/cassert \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

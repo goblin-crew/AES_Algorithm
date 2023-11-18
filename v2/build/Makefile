@@ -117,48 +117,120 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named aes128
+# Target rules for targets named aes128ecb
 
 # Build rule for target.
-aes128: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aes128
-.PHONY : aes128
+aes128ecb: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 aes128ecb
+.PHONY : aes128ecb
 
 # fast build rule for target.
-aes128/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/build
-.PHONY : aes128/fast
+aes128ecb/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/build
+.PHONY : aes128ecb/fast
 
-lib/HelloWorld/HelloWorld.o: lib/HelloWorld/HelloWorld.cpp.o
-.PHONY : lib/HelloWorld/HelloWorld.o
+lib/aes/key.o: lib/aes/key.cpp.o
+.PHONY : lib/aes/key.o
 
 # target to build an object file
-lib/HelloWorld/HelloWorld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o
-.PHONY : lib/HelloWorld/HelloWorld.cpp.o
+lib/aes/key.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/key.cpp.o
+.PHONY : lib/aes/key.cpp.o
 
-lib/HelloWorld/HelloWorld.i: lib/HelloWorld/HelloWorld.cpp.i
-.PHONY : lib/HelloWorld/HelloWorld.i
+lib/aes/key.i: lib/aes/key.cpp.i
+.PHONY : lib/aes/key.i
 
 # target to preprocess a source file
-lib/HelloWorld/HelloWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.i
-.PHONY : lib/HelloWorld/HelloWorld.cpp.i
+lib/aes/key.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/key.cpp.i
+.PHONY : lib/aes/key.cpp.i
 
-lib/HelloWorld/HelloWorld.s: lib/HelloWorld/HelloWorld.cpp.s
-.PHONY : lib/HelloWorld/HelloWorld.s
+lib/aes/key.s: lib/aes/key.cpp.s
+.PHONY : lib/aes/key.s
 
 # target to generate assembly for a file
-lib/HelloWorld/HelloWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.s
-.PHONY : lib/HelloWorld/HelloWorld.cpp.s
+lib/aes/key.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/key.cpp.s
+.PHONY : lib/aes/key.cpp.s
+
+lib/aes/statematrix.o: lib/aes/statematrix.cpp.o
+.PHONY : lib/aes/statematrix.o
+
+# target to build an object file
+lib/aes/statematrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/statematrix.cpp.o
+.PHONY : lib/aes/statematrix.cpp.o
+
+lib/aes/statematrix.i: lib/aes/statematrix.cpp.i
+.PHONY : lib/aes/statematrix.i
+
+# target to preprocess a source file
+lib/aes/statematrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/statematrix.cpp.i
+.PHONY : lib/aes/statematrix.cpp.i
+
+lib/aes/statematrix.s: lib/aes/statematrix.cpp.s
+.PHONY : lib/aes/statematrix.s
+
+# target to generate assembly for a file
+lib/aes/statematrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes/statematrix.cpp.s
+.PHONY : lib/aes/statematrix.cpp.s
+
+lib/aes128.lib.o: lib/aes128.lib.cpp.o
+.PHONY : lib/aes128.lib.o
+
+# target to build an object file
+lib/aes128.lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes128.lib.cpp.o
+.PHONY : lib/aes128.lib.cpp.o
+
+lib/aes128.lib.i: lib/aes128.lib.cpp.i
+.PHONY : lib/aes128.lib.i
+
+# target to preprocess a source file
+lib/aes128.lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes128.lib.cpp.i
+.PHONY : lib/aes128.lib.cpp.i
+
+lib/aes128.lib.s: lib/aes128.lib.cpp.s
+.PHONY : lib/aes128.lib.s
+
+# target to generate assembly for a file
+lib/aes128.lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/aes128.lib.cpp.s
+.PHONY : lib/aes128.lib.cpp.s
+
+lib/tools/converters.o: lib/tools/converters.cpp.o
+.PHONY : lib/tools/converters.o
+
+# target to build an object file
+lib/tools/converters.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/tools/converters.cpp.o
+.PHONY : lib/tools/converters.cpp.o
+
+lib/tools/converters.i: lib/tools/converters.cpp.i
+.PHONY : lib/tools/converters.i
+
+# target to preprocess a source file
+lib/tools/converters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/tools/converters.cpp.i
+.PHONY : lib/tools/converters.cpp.i
+
+lib/tools/converters.s: lib/tools/converters.cpp.s
+.PHONY : lib/tools/converters.s
+
+# target to generate assembly for a file
+lib/tools/converters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/lib/tools/converters.cpp.s
+.PHONY : lib/tools/converters.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +238,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +246,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128.dir/build.make CMakeFiles/aes128.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes128ecb.dir/build.make CMakeFiles/aes128ecb.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -185,10 +257,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... aes128"
-	@echo "... lib/HelloWorld/HelloWorld.o"
-	@echo "... lib/HelloWorld/HelloWorld.i"
-	@echo "... lib/HelloWorld/HelloWorld.s"
+	@echo "... aes128ecb"
+	@echo "... lib/aes/key.o"
+	@echo "... lib/aes/key.i"
+	@echo "... lib/aes/key.s"
+	@echo "... lib/aes/statematrix.o"
+	@echo "... lib/aes/statematrix.i"
+	@echo "... lib/aes/statematrix.s"
+	@echo "... lib/aes128.lib.o"
+	@echo "... lib/aes128.lib.i"
+	@echo "... lib/aes128.lib.s"
+	@echo "... lib/tools/converters.o"
+	@echo "... lib/tools/converters.i"
+	@echo "... lib/tools/converters.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -83,33 +83,81 @@ CMakeFiles/aes128.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/main.cpp -o CMakeFiles/aes128.dir/main.cpp.s
 
-CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o: CMakeFiles/aes128.dir/flags.make
-CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o: ../lib/HelloWorld/HelloWorld.cpp
-CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o: CMakeFiles/aes128.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o -MF CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o.d -o CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/HelloWorld/HelloWorld.cpp
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o: CMakeFiles/aes128.dir/flags.make
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o: ../lib/aes128.lib.cpp
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o: CMakeFiles/aes128.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o -MF CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o.d -o CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes128.lib.cpp
 
-CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/HelloWorld/HelloWorld.cpp > CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.i
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes128.dir/lib/aes128.lib.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes128.lib.cpp > CMakeFiles/aes128.dir/lib/aes128.lib.cpp.i
 
-CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/HelloWorld/HelloWorld.cpp -o CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.s
+CMakeFiles/aes128.dir/lib/aes128.lib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/lib/aes128.lib.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes128.lib.cpp -o CMakeFiles/aes128.dir/lib/aes128.lib.cpp.s
+
+CMakeFiles/aes128.dir/lib/tools/converters.cpp.o: CMakeFiles/aes128.dir/flags.make
+CMakeFiles/aes128.dir/lib/tools/converters.cpp.o: ../lib/tools/converters.cpp
+CMakeFiles/aes128.dir/lib/tools/converters.cpp.o: CMakeFiles/aes128.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aes128.dir/lib/tools/converters.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes128.dir/lib/tools/converters.cpp.o -MF CMakeFiles/aes128.dir/lib/tools/converters.cpp.o.d -o CMakeFiles/aes128.dir/lib/tools/converters.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/tools/converters.cpp
+
+CMakeFiles/aes128.dir/lib/tools/converters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes128.dir/lib/tools/converters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/tools/converters.cpp > CMakeFiles/aes128.dir/lib/tools/converters.cpp.i
+
+CMakeFiles/aes128.dir/lib/tools/converters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/lib/tools/converters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/tools/converters.cpp -o CMakeFiles/aes128.dir/lib/tools/converters.cpp.s
+
+CMakeFiles/aes128.dir/lib/aes/key.cpp.o: CMakeFiles/aes128.dir/flags.make
+CMakeFiles/aes128.dir/lib/aes/key.cpp.o: ../lib/aes/key.cpp
+CMakeFiles/aes128.dir/lib/aes/key.cpp.o: CMakeFiles/aes128.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aes128.dir/lib/aes/key.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes128.dir/lib/aes/key.cpp.o -MF CMakeFiles/aes128.dir/lib/aes/key.cpp.o.d -o CMakeFiles/aes128.dir/lib/aes/key.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/key.cpp
+
+CMakeFiles/aes128.dir/lib/aes/key.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes128.dir/lib/aes/key.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/key.cpp > CMakeFiles/aes128.dir/lib/aes/key.cpp.i
+
+CMakeFiles/aes128.dir/lib/aes/key.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/lib/aes/key.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/key.cpp -o CMakeFiles/aes128.dir/lib/aes/key.cpp.s
+
+CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o: CMakeFiles/aes128.dir/flags.make
+CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o: ../lib/aes/statematrix.cpp
+CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o: CMakeFiles/aes128.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o -MF CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o.d -o CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/statematrix.cpp
+
+CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/statematrix.cpp > CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.i
+
+CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/v2/lib/aes/statematrix.cpp -o CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.s
 
 # Object files for target aes128
 aes128_OBJECTS = \
 "CMakeFiles/aes128.dir/main.cpp.o" \
-"CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o"
+"CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o" \
+"CMakeFiles/aes128.dir/lib/tools/converters.cpp.o" \
+"CMakeFiles/aes128.dir/lib/aes/key.cpp.o" \
+"CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o"
 
 # External object files for target aes128
 aes128_EXTERNAL_OBJECTS =
 
 bin/aes128: CMakeFiles/aes128.dir/main.cpp.o
-bin/aes128: CMakeFiles/aes128.dir/lib/HelloWorld/HelloWorld.cpp.o
+bin/aes128: CMakeFiles/aes128.dir/lib/aes128.lib.cpp.o
+bin/aes128: CMakeFiles/aes128.dir/lib/tools/converters.cpp.o
+bin/aes128: CMakeFiles/aes128.dir/lib/aes/key.cpp.o
+bin/aes128: CMakeFiles/aes128.dir/lib/aes/statematrix.cpp.o
 bin/aes128: CMakeFiles/aes128.dir/build.make
 bin/aes128: CMakeFiles/aes128.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/aes128"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/aes128"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aes128.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

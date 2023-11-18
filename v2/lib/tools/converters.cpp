@@ -60,7 +60,7 @@ HexString bytes2hex(ByteArray ba) {
     stringstream hex_ss;
 
     for (auto it=ba.begin(); it != ba.end(); ++it) {
-        hex_ss << std::setfill ('0') << std::setw(2) << std::hex << *it;
+        hex_ss << std::setfill('0') << std::setw(2) << std::hex << int(*it);
     }
 
     HexString hstr = hex_ss.str();

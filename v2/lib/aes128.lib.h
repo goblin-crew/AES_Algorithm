@@ -9,5 +9,10 @@
 #include "aes/key.h"
 #include "aes/statematrix.h"
 
+using namespace std;
+
+vector<ByteArray> get_blocks(ByteArray b);
+ByteArray aes128ecb_encrypt(MasterKey master_key, ByteArray msg);
+ByteArray aes128ecb_decrypt(MasterKey master_key, ByteArray ciphertext);
 
 # endif
