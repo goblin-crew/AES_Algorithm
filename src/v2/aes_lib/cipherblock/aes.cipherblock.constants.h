@@ -2,7 +2,7 @@
 #define AES_CIPHERBLOCK_CONSTANTS_H
 
 #include<bits/stdc++.h>
-#include "../types/aes.types.lib.h"
+#include "../types/aes.types.h"
 
 using namespace std;
 

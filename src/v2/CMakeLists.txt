@@ -1,17 +1,16 @@
 cmake_minimum_required(VERSION 3.9.1)
-project(AES128)
+project(AES)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(LIB lib/aes128.lib.h
-        lib/aes128.lib.cpp
-        lib/types/types.h
-        lib/constants/constants.h
-        lib/tools/converters.h
-        lib/tools/converters.cpp
-        lib/aes/key.h
-        lib/aes/key.cpp
-        lib/aes/statematrix.h
-        lib/aes/statematrix.cpp
+set(LIB aes_lib/aes.lib.h
+        aes_lib/aes.cipherblock.lib.h
+        aes_lib/types/aes.types.h
+        aes_lib/types/aes.types.cpp
+        aes_lib/modes/aes.modes.h
+        aes_lib/modes/aes.modes.cpp
+        aes_lib/cipherblock/aes.cipherblock.h
+        aes_lib/cipherblock/aes.cipherblock.cpp
+        aes_lib/cipherblock/aes.cipherblock.constants.h
     )
 
 set(SOURCES aes.cpp 
