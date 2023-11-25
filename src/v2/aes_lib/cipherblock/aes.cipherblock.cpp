@@ -219,17 +219,16 @@ void CipherBlock::inv_mix_columns() {
 
 void CipherBlock::encrypt(bytes master_key) {
     RoundKey roundkey = RoundKey(master_key);
-
     this->add_roundkey(roundkey[0]);
 
-    while(roundkey.it != roundkey.end())
+    for (int i=0; i < N_ROUNDS; ++i)
     {
         ++roundkey;
 
         this->sub_bytes();
         this->shift_rows();
 
-        if (roundkey.it < (roundkey.end() - 1)){
+        if (i < (N_ROUNDS - 1)){
             this->mix_columns();
         }
 
@@ -242,7 +241,8 @@ void CipherBlock::decrypt(bytes master_key) {
 
     this->add_roundkey(roundkey[N_ROUNDS]);
 
-    while(roundkey.it >= roundkey.begin()){
+    for (int i=0; i < N_ROUNDS; ++i)
+    {
         --roundkey;
 
         this->inv_shift_rows();
@@ -250,7 +250,7 @@ void CipherBlock::decrypt(bytes master_key) {
 
         this->add_roundkey(*roundkey.it);
 
-        if (roundkey.it > roundkey.begin()){
+        if (i < (N_ROUNDS - 1)){
             this->inv_mix_columns();
         }
     }
