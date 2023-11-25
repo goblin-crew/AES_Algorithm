@@ -4,7 +4,7 @@ using namespace std;
 
 //----------------------------------------------------------------------------------
 
-bytes toBytes(matrix mtx)
+bytes matrix_toBytes(matrix mtx)
 {
     bytes b;
 
@@ -16,7 +16,7 @@ bytes toBytes(matrix mtx)
     return b;
 }
 
-bytes toBytes(hexString hstr){
+bytes hexString_toBytes(hexString hstr){
     bytes ba;
 
     for (int i=0; i < hstr.length(); i += 2){
@@ -34,7 +34,7 @@ bytes toBytes(hexString hstr){
     return ba;
 }
 
-bytes toBytes(string str){
+bytes string_toBytes(string str){
     bytes ba;
 
     for (int i=0; i < str.length(); ++i) {
@@ -56,14 +56,14 @@ bytes bytes_xor(bytes a, bytes b){
 
 //----------------------------------------------------------------------------------
 
-matrix toMatrix(bytes ba){
+matrix bytes_toMatrix(bytes ba){
     matrix mtx;
 
-    for (int i = 0; i < ba.size(); i+=MATRIX_LEN)
+    for (int i = 0; i < ba.size(); i+=4)
     {
         bytes row;
 
-        for (int j=i; j < (i + MATRIX_LEN); ++j) 
+        for (int j=i; j < (i + 4); ++j) 
         {
             row.push_back(ba[j]);
         }
@@ -74,17 +74,17 @@ matrix toMatrix(bytes ba){
     return mtx;
 }
 
-matrix toMatrix(hexString hstr){
-    return toMatrix(toBytes(hstr));
+matrix hexString_toMatrix(hexString hstr){
+    return bytes_toMatrix(hexString_toBytes(hstr));
 }
 
-matrix toMatrix(string str){
-    return toMatrix(toBytes(str));
+matrix string_toMatrix(string str){
+    return bytes_toMatrix(string_toBytes(str));
 }
 
 //----------------------------------------------------------------------------------
 
-hexString toHexString(bytes ba){
+hexString bytes_toHexString(bytes ba){
     stringstream hex_ss;
 
     for (auto it=ba.begin(); it != ba.end(); ++it) 
@@ -97,17 +97,17 @@ hexString toHexString(bytes ba){
     return hstr;
 }
 
-hexString toHexString(matrix mtx){
-    return toHexString(toBytes(mtx));
+hexString matrix_toHexString(matrix mtx){
+    return bytes_toHexString(matrix_toBytes(mtx));
 }
 
-hexString toHexString(string str){
-    return toHexString(toBytes(str));
+hexString string_toHexString(string str){
+    return bytes_toHexString(string_toBytes(str));
 }
 
 //----------------------------------------------------------------------------------
 
-string toString(bytes ba){
+string bytes_toString(bytes ba){
     stringstream ss;
 
     for (auto it=ba.begin(); it != ba.end(); ++it)
@@ -118,10 +118,10 @@ string toString(bytes ba){
     return ss.str();
 }
 
-string toString(matrix mtx){
-    return toString(toBytes(mtx));
+string matrix_toString(matrix mtx){
+    return bytes_toString(matrix_toBytes(mtx));
 }
 
-string toString(hexString hstr){
-    return toString(toBytes(hstr));
+string hexString_toString(hexString hstr){
+    return bytes_toString(hexString_toBytes(hstr));
 }

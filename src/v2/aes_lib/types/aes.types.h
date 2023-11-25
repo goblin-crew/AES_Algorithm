@@ -2,7 +2,6 @@
 #define AES_TYPES_H
 
 #include<bits/stdc++.h>
-#include "../cipherblock/aes.cipherblock.constants.h"
 
 using namespace std;
 
@@ -12,22 +11,22 @@ typedef vector<Byte> bytes;
 typedef vector<bytes> matrix;
 typedef string hexString;
 
-bytes toBytes(matrix);
-bytes toBytes(string);
-bytes toBytes(hexString);
+bytes matrix_toBytes(matrix);
+bytes string_toBytes(string);
+bytes hexString_toBytes(hexString);
 
 bytes bytes_xor(bytes a, bytes b);
 
-matrix toMatrix(bytes);
-matrix toMatrix(hexString);
-matrix toMatrix(string);
+matrix bytes_toMatrix(bytes);
+matrix hexString_toMatrix(hexString);
+matrix string_toMatrix(string);
 
-hexString toHexString(bytes);
-hexString toHexString(matrix);
-hexString toHexString(string);
+hexString bytes_toHexString(bytes);
+hexString matrix_toHexString(matrix);
+hexString string_toHexString(string);
 
-string toString(bytes);
-string toString(matrix);
-string toString(hexString);
+string bytes_toString(bytes);
+string matrix_toString(matrix);
+string hexString_toString(hexString);
 
 #endif //AES_TYPES_LIB_H

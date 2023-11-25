@@ -10,7 +10,7 @@ void RoundKey::expand(bytes b) {
         Expands and returns a list of key matrices for the given master_key.
     */
 
-    matrix key_columns = toMatrix(b);
+    matrix key_columns = bytes_toMatrix(b);
     int iteration_size = int((b.size() - (b.size() % MATRIX_LEN)) / MATRIX_LEN);  //integral_division(master_key.size(), MATRIX_LEN);
 
     int i = 1;
@@ -104,19 +104,19 @@ CipherBlock::CipherBlock(matrix mtx) {
 }
 
 CipherBlock::CipherBlock(bytes b) {
-    this->value = toMatrix(b);
+    this->value = bytes_toMatrix(b);
 }
 
 bytes CipherBlock::to_bytes(){
-    return toBytes(this->value);
+    return matrix_toBytes(this->value);
 }
 
 string CipherBlock::to_string(){
-    return toString(this->value);
+    return matrix_toString(this->value);
 }
 
 hexString CipherBlock::to_hexString(){
-    return toHexString(this->value);
+    return matrix_toHexString(this->value);
 }
 
 void CipherBlock::add_roundkey(matrix roundkey) {
