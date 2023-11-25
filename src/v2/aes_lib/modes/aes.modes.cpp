@@ -106,6 +106,8 @@ bytes PCBC::decrypt(bytes value, bytes key, bytes iv){
 
         iv = bytes_xor(ct, *it);
     }
+
+    return plaintext;
 }
 
 //----------------------------------------------------------
@@ -142,6 +144,8 @@ bytes CFB::decrypt(bytes value, bytes key, bytes iv){
 
         iv = *it;
     }
+
+    return plaintext;
 }
 
 //----------------------------------------------------------
