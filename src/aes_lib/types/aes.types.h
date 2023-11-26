@@ -2,6 +2,7 @@
 #define AES_TYPES_H
 
 #include<bits/stdc++.h>
+#include <fstream>
 
 using namespace std;
 
@@ -16,6 +17,9 @@ bytes string_toBytes(string);
 bytes hexString_toBytes(hexString);
 
 bytes bytes_xor(bytes a, bytes b);
+bytes read_file_bytes(string path);
+void write_file_bytes(string path, bytes b);
+
 
 matrix bytes_toMatrix(bytes);
 matrix hexString_toMatrix(hexString);

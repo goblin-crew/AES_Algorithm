@@ -1,4 +1,5 @@
 #include "aes.types.h"
+#include <fstream>
 
 using namespace std;
 
@@ -52,6 +53,37 @@ bytes bytes_xor(bytes a, bytes b){
     }
 
     return x;
+}
+
+bytes read_file_bytes(string path) {
+    char* file_path = new char[path.length() + 1]; 
+    strcpy(file_path, path.c_str()); 
+
+    std::ifstream file(file_path, std::ios::binary);
+
+    file.unsetf(std::ios::skipws);
+    std::streampos fileSize;
+
+    file.seekg(0, std::ios::end);
+    fileSize = file.tellg();
+    file.seekg(0, std::ios::beg);
+
+    // reserve capacity
+    bytes b;
+    b.reserve(fileSize);
+    b.insert(b.begin(), std::istream_iterator<Byte>(file), std::istream_iterator<Byte>());
+
+    return b;
+}
+
+void write_file_bytes(string path, bytes b){
+    char* file_path = new char[path.length() + 1]; 
+    strcpy(file_path, path.c_str());
+
+    const std::vector<uint8_t>  buffer(b); // let's assume that i'ts filled with values
+    std::ofstream out(file_path, std::ios::out | std::ios::binary);
+    out.write(reinterpret_cast<const char*>(buffer.data()), buffer.size());
+    out.close();
 }
 
 //----------------------------------------------------------------------------------

@@ -13,12 +13,15 @@ enum Mode {
 struct Args {
     Mode mode;
     bool encrypt;
+    bool isfile;
+    string file_path;
     bytes key;
     bytes iv;
     bytes msg;
 
     Args(){
         this->encrypt = false;
+        this->isfile = false;
     }
 
     void set_key(hexString val) {
@@ -82,6 +85,12 @@ int main(int argc, char* argv[]){
             i += 1;
             args.set_msg(string(argv[i]));
         }
+        else if (string(argv[i]) == "--path" || string(argv[i]) == "-p"){
+            i += 1;
+            args.file_path = string(argv[i]);
+            args.isfile = true;
+            args.msg = read_file_bytes(string(argv[i]));
+        }
     }
 
     bytes result;
@@ -109,8 +118,16 @@ int main(int argc, char* argv[]){
             break;
     }
 
-    cout << "\n" << ((args.encrypt)? bytes_toHexString(result) : bytes_toString(result)) << "\n" << endl;
+    if(args.isfile) {
+        write_file_bytes(args.file_path, result);
+        cout << "\nWritten to file: " << args.file_path << "\n" << endl;
+    }
+    else
+    {
+        cout << "\n" << ((args.encrypt)? bytes_toHexString(result) : bytes_toString(result)) << "\n" << endl;
+    }
 
+    
     return 0;
 }
 

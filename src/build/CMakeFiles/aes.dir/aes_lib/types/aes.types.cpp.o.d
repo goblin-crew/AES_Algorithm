@@ -1,7 +1,7 @@
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o: \
- /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/types/aes.types.cpp \
+ /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/types/aes.types.cpp \
  /usr/include/stdc-predef.h \
- /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/types/aes.types.h \
+ /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/types/aes.types.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
  /usr/include/c++/11/cassert \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/slowlorizz/.GIT/AES_Algorithm/src/v2
+CMAKE_SOURCE_DIR = /home/slowlorizz/.GIT/AES_Algorithm/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/slowlorizz/.GIT/AES_Algorithm/src/v2/build
+CMAKE_BINARY_DIR = /home/slowlorizz/.GIT/AES_Algorithm/src/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/aes.dir/depend.make
@@ -72,58 +72,58 @@ include CMakeFiles/aes.dir/flags.make
 CMakeFiles/aes.dir/aes.cpp.o: CMakeFiles/aes.dir/flags.make
 CMakeFiles/aes.dir/aes.cpp.o: ../aes.cpp
 CMakeFiles/aes.dir/aes.cpp.o: CMakeFiles/aes.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/aes.dir/aes.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes.cpp.o -MF CMakeFiles/aes.dir/aes.cpp.o.d -o CMakeFiles/aes.dir/aes.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/aes.dir/aes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes.cpp.o -MF CMakeFiles/aes.dir/aes.cpp.o.d -o CMakeFiles/aes.dir/aes.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/aes.cpp
 
 CMakeFiles/aes.dir/aes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes.dir/aes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes.cpp > CMakeFiles/aes.dir/aes.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/aes.cpp > CMakeFiles/aes.dir/aes.cpp.i
 
 CMakeFiles/aes.dir/aes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes.dir/aes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes.cpp -o CMakeFiles/aes.dir/aes.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/aes.cpp -o CMakeFiles/aes.dir/aes.cpp.s
 
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o: CMakeFiles/aes.dir/flags.make
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o: ../aes_lib/types/aes.types.cpp
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o: CMakeFiles/aes.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o -MF CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/types/aes.types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o -MF CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/types/aes.types.cpp
 
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/types/aes.types.cpp > CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/types/aes.types.cpp > CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.i
 
 CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/types/aes.types.cpp -o CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/types/aes.types.cpp -o CMakeFiles/aes.dir/aes_lib/types/aes.types.cpp.s
 
 CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o: CMakeFiles/aes.dir/flags.make
 CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o: ../aes_lib/modes/aes.modes.cpp
 CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o: CMakeFiles/aes.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o -MF CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/modes/aes.modes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o -MF CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/modes/aes.modes.cpp
 
 CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/modes/aes.modes.cpp > CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/modes/aes.modes.cpp > CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.i
 
 CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/modes/aes.modes.cpp -o CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/modes/aes.modes.cpp -o CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.s
 
 CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o: CMakeFiles/aes.dir/flags.make
 CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o: ../aes_lib/cipherblock/aes.cipherblock.cpp
 CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o: CMakeFiles/aes.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o -MF CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/cipherblock/aes.cipherblock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o -MF CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o.d -o CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o -c /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/cipherblock/aes.cipherblock.cpp
 
 CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/cipherblock/aes.cipherblock.cpp > CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/cipherblock/aes.cipherblock.cpp > CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.i
 
 CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/v2/aes_lib/cipherblock/aes.cipherblock.cpp -o CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/slowlorizz/.GIT/AES_Algorithm/src/aes_lib/cipherblock/aes.cipherblock.cpp -o CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.s
 
 # Object files for target aes
 aes_OBJECTS = \
@@ -141,7 +141,7 @@ bin/aes: CMakeFiles/aes.dir/aes_lib/modes/aes.modes.cpp.o
 bin/aes: CMakeFiles/aes.dir/aes_lib/cipherblock/aes.cipherblock.cpp.o
 bin/aes: CMakeFiles/aes.dir/build.make
 bin/aes: CMakeFiles/aes.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin/aes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin/aes"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aes.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/aes.dir/clean:
 .PHONY : CMakeFiles/aes.dir/clean
 
 CMakeFiles/aes.dir/depend:
-	cd /home/slowlorizz/.GIT/AES_Algorithm/src/v2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/slowlorizz/.GIT/AES_Algorithm/src/v2 /home/slowlorizz/.GIT/AES_Algorithm/src/v2 /home/slowlorizz/.GIT/AES_Algorithm/src/v2/build /home/slowlorizz/.GIT/AES_Algorithm/src/v2/build /home/slowlorizz/.GIT/AES_Algorithm/src/v2/build/CMakeFiles/aes.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/slowlorizz/.GIT/AES_Algorithm/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/slowlorizz/.GIT/AES_Algorithm/src /home/slowlorizz/.GIT/AES_Algorithm/src /home/slowlorizz/.GIT/AES_Algorithm/src/build /home/slowlorizz/.GIT/AES_Algorithm/src/build /home/slowlorizz/.GIT/AES_Algorithm/src/build/CMakeFiles/aes.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/aes.dir/depend
 
