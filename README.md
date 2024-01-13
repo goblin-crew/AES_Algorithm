@@ -1,19 +1,4 @@
 # AES_Algorithm
 
-> This is an implementation of the 128-bit ecb AES Encryption
-
-## usage
-
-### encryption
-
-```
-./aes128ecb encrypt [[-k|--key] <hex-string> | [[-p|--plain] <value as plain string> | [-b|--bytes] <value as hex-string>]]
-
-```
-
-### decryption
-
-```
-./aes128ecb decrypt [[-k|--key] <hex-string> | [-b|--bytes] <value as hex-string> | [-h|--out-hex] output as hex string, default: plain string]
-
-```
+> [!INFO]
+> This is an C++ Implementation of the AES-Algorithm, containing a library that can be used in other projects and a Binary using this Library
